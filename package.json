@@ -1,0 +1,39 @@
+{
+  "name": "stick-hero",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "data": "node ./scripts/simpleDataBuild.js",
+    "start": "webpack serve --env env=dev --open",
+    "host": "webpack serve --env env=host --open",
+    "build": "webpack --env env=preview",
+    "export": "webpack --env env=export",
+    "preview-upload": "webpack --env env=preview && aws s3 cp preview s3://abidn.space/super-tiles --recursive --cache-control max-age=120 --acl public-read",
+    "export-upload": "webpack --env env=export && aws s3 cp dist/supper-tiles s3://abidn.space/super-tiles --recursive --cache-control max-age=120 --acl public-read"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "datauri": "^4.1.0",
+    "esbuild-loader": "^3.0.1",
+    "eslint": "^8.45.0",
+    "html-inline-script-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "ip": "^1.1.8",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  },
+  "dependencies": {
+    "@pixi/particle-emitter": "^5.0.8",
+    "@pixi/sound": "^5.2.0",
+    "@tweenjs/tween.js": "^21.0.0",
+    "pixi-scrollbox": "^2.3.1",
+    "pixi-spine": "^4.0.4",
+    "pixi-viewport": "4.10.0",
+    "pixi.js": "^7.2.4"
+  }
+}
