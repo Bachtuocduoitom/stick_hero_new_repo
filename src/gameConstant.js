@@ -95,7 +95,7 @@ export const GameConstant = Object.freeze({
   INDEXEDDB_CURRENT_SKIN              : "currentSkin",
   INDEXEDDB_BEST_SCORE                : "bestScore",
   INDEXEDDB_PREV_BACKGROUND_KEY       : "prevBackground",
-  PLAYER_DEFAULT_CHERRY_NUMBER        : 0,
+  PLAYER_DEFAULT_CHERRY_NUMBER        : 100,
   PLAYER_DEFAULT_SKIN                 : "hero_001",
   PLAYER_DEFAUT_BEST_SCORE            : 0,
   DEFAUT_LIST_HERO_SKIN_UNLOCK        : ["hero_001"],
