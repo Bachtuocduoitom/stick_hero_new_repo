@@ -8,9 +8,14 @@
     "start": "webpack serve --env env=dev --open",
     "host": "webpack serve --env env=host --open",
     "build": "webpack --env env=preview",
+    "deploy": "gh-pages -d dist",
     "export": "webpack --env env=export",
     "preview-upload": "webpack --env env=preview && aws s3 cp preview s3://abidn.space/super-tiles --recursive --cache-control max-age=120 --acl public-read",
     "export-upload": "webpack --env env=export && aws s3 cp dist/supper-tiles s3://abidn.space/super-tiles --recursive --cache-control max-age=120 --acl public-read"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bachtuocduoitom/stick_hero_new_repo.git"
   },
   "license": "MIT",
   "devDependencies": {
